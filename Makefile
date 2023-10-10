@@ -11,3 +11,9 @@ Itoa/itoa.o:
 
 clean:
 	rm -rf *.o timer timer.wasm Itoa/*.o print/*.o
+
+INSTALL_DIR ?= /usr/local/bin
+install: build
+	install timer $(INSTALL_DIR)
+
+.PHONY: build clean install
