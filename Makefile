@@ -1,3 +1,5 @@
+build: timer
+
 timer: main.c Itoa/itoa.o print/printv.o
 	$(CC) -Wall -o timer $^
 
@@ -8,4 +10,4 @@ Itoa/itoa.o:
 	make -C Itoa
 
 clean:
-	rm -rf *.o timer timer.wasm
+	rm -rf *.o timer timer.wasm Itoa/*.o print/*.o
