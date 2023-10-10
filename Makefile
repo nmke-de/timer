@@ -6,3 +6,6 @@ print/printv.o:
 
 Itoa/itoa.o:
 	make -C Itoa
+
+clean:
+	rm -rf *.o timer timer.wasm
