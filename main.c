@@ -34,7 +34,8 @@ void print_elapsed() {
 
 void fine(int _) {
 	print_elapsed();
-	println("");
+	time_t end = time(NULL);
+	printv("\nEnd: ", ctime(&end));
 	_exit(0);
 }
 
@@ -46,6 +47,7 @@ int main() {
 	for (int i = 0; i < 3; i++)
 		secs[i] = 0;
 	start = time(NULL);
+	printv("Start: ", ctime(&start));
 	signal(SIGINT, fine);
 	signal(SIGTERM, fine);
 	signal(SIGHUP, fine);
